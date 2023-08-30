@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require 'socket'
+
+server = TCPServer.new 1965
+
+loop do
+  client = server.accept
+  client.puts "This is a sample gemini document."
+  client.close
+end

@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/twinsies.rb'
+
+url = ARGV[0]
+
+begin
+  puts Twinsies.get(url)
+rescue Twinsies::Error => e
+  puts e.message
+end
